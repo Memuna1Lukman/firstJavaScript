@@ -42,10 +42,17 @@ public class Grade {
         }
         System.out.println("\n--- Student Report Card ---");
         System.out.println("Student Name: " + name);
+        System.out.println("---------------------------");
+        
+        // Print individual subject scores
+        for (int i = 0; i < subjects.length; i++) {
+            System.out.println(subjects[i] + ": " + marks[i]);
+        }
+        
+        System.out.println("---------------------------");
         System.out.println("Total Marks: " + total + " / " + (marks.length * 100));
         System.out.println("Average Mark: " + String.format("%.2f", average));
         System.out.println("Final Grade: " + grade);
-        
         scanner.close();
     }
 
