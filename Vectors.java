@@ -15,6 +15,7 @@ public class Vectors {
             for (int j = 0; j < cols; j++){
                sum[i][j] = vect1[i][j] + vect2[i][j];
                dot += vect1[i][j] * vect2[i][j];
+               
             }
         }
         System.out.println("Sum vector: ");
@@ -22,6 +23,11 @@ public class Vectors {
             for (int j = 0; j < cols; j++){
                 System.out.println(sum[i][j]);
             }
+        }
+        if(dot == 0){
+            System.out.println("The vectors are perpendicular");
+        }else{
+            System.out.println("The vectors are not perpendicular");
         }
         System.out.println("The dot product is: " + dot);
     }
